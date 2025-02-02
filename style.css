@@ -12,6 +12,39 @@ body{
     scroll-behavior: smooth; 
 }
 
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a; /* لون الخلفية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* تأكد من ظهوره فوق كل شيء */
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3; /* لون الحدود */
+    border-top: 4px solid #3498db; /* لون الحدود العلوية */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* دوران */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-screen p {
+    margin-top: 10px;
+    color: #fff; /* لون النص */
+    font-size: 18px;
+}
 
 header {
     background-color: #1c1fcfef;
