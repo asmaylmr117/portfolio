@@ -15,7 +15,11 @@
 </head>
 
 <body>
-
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+   
     <header>
         <a href="#" class="logo">MOSTAFA_ALANANI</a>
         <nav class="navigation">
@@ -523,7 +527,13 @@
             </form>
         </div>
     </section>
-
+    <script>
+        // إخفاء شاشة التحميل بعد تحميل الصفحة
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
