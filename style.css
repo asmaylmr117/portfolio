@@ -17,21 +17,21 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #072b6d; /* لون الخلفية */
+    background-color: #072b6d; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 9999; /* تأكد من ظهوره فوق كل شيء */
+    z-index: 9999; 
 }
 
 .loading-spinner {
-    border: 4px solid #f3f3f3; /* لون الحدود */
-    border-top: 4px solid #3498db; /* لون الحدود العلوية */
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #3498db; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    animation: spin 1s linear infinite; /* دوران */
+    animation: spin 1s linear infinite; 
 }
 
 @keyframes spin {
@@ -41,7 +41,7 @@ body{
 
 .loading-screen p {
     margin-top: 10px;
-    color: #fff; /* لون النص */
+    color: #fff; 
     font-size: 18px;
 }
 
@@ -53,42 +53,56 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px ;
+    padding: 10px 200px;
 }
 
-.logo{
+.logo {
     text-decoration: none;
     color: #eceff7;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
 }
-/* تنسيق الرابط بدون تأثير */
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #eceff7;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+
 .nav-link {
-    text-decoration: none; /* إزالة التسطير الافتراضي */
-    position: relative; /* للسماح بوضع العناصر نسبةً إلى العنصر نفسه */
-    padding-bottom: 2px; /* إضافة مسافة أسفل النص لعرض الخط بشكل جميل */
-   
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
 }
 
-/* الخط السفلي عند تمرير الماوس */
 .nav-link::after {
-    content: ''; /* إنشاء محتوى فارغ لعنصر الخط */
-    display: block; /* جعله عنصر بلوك */
-    width: 0; /* البداية بدون عرض */
-    height: 1px; /* سمك الخط */
-    background: rgb(219, 219, 228); /* لون الخط الأزرق */
-    transition: width 0.3s; /* تأثير الانتقال لعرض الخط */
-    position: absolute; /* وضع العنصر نسبةً إلى الرابط */
-    bottom: 0; /* وضع العنصر في أسفل الرابط */
-    right:  0; /* بدء الخط من اليسار */
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: rgb(219, 219, 228);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-/* تأثير تمرير الماوس */
 .nav-link:hover::after {
-    width: 90%; /* عرض الخط كامل عند التمرير */
+    width: 90%;
 }
-.navigation a{
+
+.navigation a {
     color: #d9dce4;
     text-decoration: none;
     font-size: 1.1em;
@@ -96,8 +110,56 @@ header {
     padding-left: 30px;
 }
 
-.navigation a:hover{
+.navigation a:hover {
     color: #f0edf7;
+}
+
+
+.close-btn {
+    display: none; 
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    color: #eceff7;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #272af0b9;
+        padding: 40px 0 20px; 
+        text-align: center;
+    }
+    
+    
+    .navigation.active {
+        display: block;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 15px 0;
+        padding-left: 0;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .close-btn {
+        display: block; 
+    }
 }
 
 section {
@@ -108,14 +170,14 @@ section {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: flex-end; /* تعديل هذه الخاصية */
-    justify-content: center; /* تعديل هذه الخاصية إذا لزم الأمر */
+    align-items: flex-end; 
+    justify-content: center; 
     background-color: #000;
     background: url(IMG/person-playing-3d-video-games-device.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-    padding-bottom: 20px; /* إضافة هذه الخاصية لتحريك العناصر لأسفل */
+    padding-bottom: 20px; 
 
 }
 
@@ -131,7 +193,7 @@ section {
     color: #3613ff;
     font-size: 2em;
     font-weight: 600;
-    background-color: rgb(12, 13, 70); /* إضافة لون الخلفية الأحمر */
+    background-color: rgb(12, 13, 70); 
 
 }
 
@@ -171,7 +233,7 @@ section {
 
 
 .social-icons a:hover {
-    color: blue; /* لون الأزرق عند التحويم */
+    color: blue; 
 }
 
 
@@ -255,8 +317,8 @@ P
 }
 .contact {
     background-color: rgb(12, 7, 85);
-    background-size: 100% 100%; /* تكبير طول وعرض الخلفية إلى 200% */
-    background-position: center; /* جعل الخلفية في المنتصف */
+    background-size: 100% 100%; 
+    background-position: center; 
 }
 
 .projects .content{
@@ -392,20 +454,20 @@ P
 
 .pointer {
     position: absolute;
-    width: 35px; /* أو أي حجم يناسبك */
-    top: 40px; /* اضبط القيم حسب التصميم */
-    left: 120px; /* اضبط القيم حسب التصميم */
+    width: 35px; 
+    top: 40px; 
+    left: 120px; 
 }
 
 .card {
     position: relative;
-    padding-left: 50px; /* لضبط المسافة من اليسار لتناسب الأيقونة */
+    padding-left: 50px; 
 }
 #git:hover {
 background-color: #6c6ceb;
 
 }
-/* تنسيق الحاوية الأساسية للفورم */
+
 .form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -415,14 +477,14 @@ background-color: #6c6ceb;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* تنسيق الحقول */
+
 .form-group {
     margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    color: white; /* جعل اللون أبيض */
+    color: white; 
     margin-bottom: 8px;
     font-size: 16px;
 }
@@ -433,7 +495,7 @@ background-color: #6c6ceb;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white; /* جعل المدخل أبيض */
+    background-color: white; 
     font-size: 14px;
     color: #333;
 }
@@ -442,7 +504,7 @@ background-color: #6c6ceb;
 .sendButton {
     width: 100%;
     padding: 12px;
-    background-color: rgb(6, 48, 184); /* جعل لون الزر أخضر */
+    background-color: rgb(6, 48, 184); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -451,7 +513,7 @@ background-color: #6c6ceb;
 }
 
 .sendButton:hover {
-    background-color: rgb(22, 94, 189); /* تأثير hover على الزر */
+    background-color: rgb(22, 94, 189); 
 }
 
   .cursor {
