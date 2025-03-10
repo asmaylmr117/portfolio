@@ -65,7 +65,7 @@
                     } else {
                         isDeleting = false;
                         textIndex = (textIndex + 1) % texts.length;
-                        setTimeout(type, 500); // تأخير قبل البدء في الكتابة مرة أخرى
+                        setTimeout(type, 500); 
                         return;
                     }
                 } else {
@@ -74,18 +74,18 @@
                         charIndex++;
                     } else {
                         isDeleting = true;
-                        setTimeout(type, 1000); // تأخير قبل البدء في المسح
+                        setTimeout(type, 1000); 
                         return;
                     }
                 }
-                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed); // سرعة الكتابة والمسح
+                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed); 
             }
             type();
         });
 
 
         function sendMail(event) {
-            event.preventDefault(); // لمنع تحديث الصفحة
+            event.preventDefault(); 
             var params = {
                 firstName: document.getElementById("firstName").value,
                 lastName: document.getElementById("lastName").value,
@@ -94,7 +94,7 @@
                 message: document.getElementById("message").value,
             };
 
-            console.log(params); // تحقق من القيم
+            console.log(params); 
 
             const serviceID = "service_fntae4y";
             const templateID = "template_s9xwcyf";
@@ -122,7 +122,7 @@
         <h2 class="title">About Me, Skills</h2>
         <H1 class="title1">1 - FrontEnd</H1>
         <br>
-        <div class="container  grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="container grid grid-cols-1 md:grid-cols-3 gap-4 justify-center">
             <div class="card1 border border-blue-500 rounded-lg p-4 " data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
                     <div class="card-icon1">
@@ -219,8 +219,18 @@
                         <h1 class="text-white mt-0 text-xl font-bold">Redux</h1>
                     </div>
                 </div>
-                <div class="card-description1 text-white">Redux helps me manage application state effectively in React,
-                    providing a predictable state container and making the app easier to debug and test.</div>
+                <div class="card-description1 text-white">Redux is a predictable state management library for JavaScript applications, commonly used with React. It helps manage application state in a centralized store, making it easier to track changes and maintain consistency across components.</div>
+            </div>
+            <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
+                <div class="card-icon-title1 flex items-center gap-3">
+                    <div class="card-icon1">
+                        <img class=" im mb-4" src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="">
+                    </div>
+                    <div class="card-title1">
+                        <h1 class="text-white mt-0 text-xl font-bold">Next.JS</h1>
+                    </div>
+                </div>
+                <div class="card-description1 text-white">Next.js is a powerful React framework that enables developers to build high-performance web applications with features like server-side rendering (SSR), static site generation (SSG), and API routes. </div>
             </div>
             <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
@@ -231,11 +241,9 @@
                         <h1 class="text-white mt-0 text-xl font-bold">TypeScript</h1>
                     </div>
                 </div>
-                <div class="card-description1 text-white">TypeScript allows me to build robust applications with static
-                    typing,
-                    improving code quality and maintainability.</div>
+                <div class="card-description1 text-white">TypeScript is a strongly typed programming language that builds on JavaScript by adding static type definitions. Developed by Microsoft, it enhances code quality and maintainability by catching errors during development and providing better tooling support.</div>
             </div>
-            <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
+            <div class="card2 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
                     <div class="card-icon1 flex gap-2">
                         <img class="mb-4" src="IMG/icons8-git-48.png" alt="">
@@ -440,14 +448,14 @@
             <div class="card-row">
                 <div class="card">
                     <div class="icon">
-                        <a href="tel:+20155884327">
+                        <a href="tel:+201066915691">
                             <i class="fas fa-phone"></i>
                         </a>
                     </div>
                     <div class="info">
                         <img src="IMG/finger-pointing.gif" class="pointer" alt="Pointing Hand">
                         <h3>Phone</h3>
-                        <p>+201558843827</p>
+                        <p>+201066915691</p>
                     </div>
                 </div>
                 <div class="card">
@@ -528,7 +536,7 @@
         </div>
     </section>
     <script>
-        // إخفاء شاشة التحميل بعد تحميل الصفحة
+        
         window.addEventListener('load', function () {
             const loadingScreen = document.getElementById('loading-screen');
             loadingScreen.style.display = 'none';
