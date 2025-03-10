@@ -19,10 +19,16 @@
         <div class="loading-spinner"></div>
         <p>Loading...</p>
     </div>
-   
+
     <header>
         <a href="#" class="logo">MOSTAFA_ALANANI</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav class="navigation">
+            <span class="close-btn">×</span> 
             <a href="#services" class="nav-link">About Me</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
@@ -65,7 +71,7 @@
                     } else {
                         isDeleting = false;
                         textIndex = (textIndex + 1) % texts.length;
-                        setTimeout(type, 500); 
+                        setTimeout(type, 500);
                         return;
                     }
                 } else {
@@ -74,18 +80,18 @@
                         charIndex++;
                     } else {
                         isDeleting = true;
-                        setTimeout(type, 1000); 
+                        setTimeout(type, 1000);
                         return;
                     }
                 }
-                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed); 
+                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
             }
             type();
         });
 
 
         function sendMail(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             var params = {
                 firstName: document.getElementById("firstName").value,
                 lastName: document.getElementById("lastName").value,
@@ -94,7 +100,7 @@
                 message: document.getElementById("message").value,
             };
 
-            console.log(params); 
+            console.log(params);
 
             const serviceID = "service_fntae4y";
             const templateID = "template_s9xwcyf";
@@ -159,7 +165,7 @@
                         <img class="mb-4" src="IMG/icons8-javascript-50.png" alt="ion">
                     </div>
                     <div class="card-title1">
-                        <h1 class="text-white mt-0 text-xl font-bold">Javascript</h1>
+                        <h1 class="text-white mt-0 text-xl font-bold">JavaScript</h1>
                     </div>
                 </div>
                 <div class="card-description1 text-white">
@@ -199,6 +205,19 @@
             <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3 ">
                     <div class="card-icon1">
+                        <img class="mb-4" src="IMG/icons8-sass-64.png" alt="">
+                    </div>
+                    <div class="card-title1">
+                        <h1 class="text-white mt-0 text-xl font-bold">Sass</h1>
+                    </div>
+                </div>
+                <div class="card-description1 text-white">Sass is a CSS preprocessor that enhances the capabilities of
+                    standard CSS by introducing features such as variables, nesting, mixins, inheritance, and functions.
+                </div>
+            </div>
+            <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
+                <div class="card-icon-title1 flex items-center gap-3 ">
+                    <div class="card-icon1">
                         <img class="mb-4" src="IMG/icons8-react-js-50.png" alt="">
                     </div>
                     <div class="card-title1">
@@ -216,21 +235,27 @@
                         <img class="mb-4" src="IMG/icons8-redux-50.png" alt="">
                     </div>
                     <div class="card-title1">
-                        <h1 class="text-white mt-0 text-xl font-bold">Redux</h1>
+                        <h1 class="text-white mt-0 text-xl font-bold">Redux & Redux toolkit</h1>
                     </div>
                 </div>
-                <div class="card-description1 text-white">Redux is a predictable state management library for JavaScript applications, commonly used with React. It helps manage application state in a centralized store, making it easier to track changes and maintain consistency across components.</div>
+                <div class="card-description1 text-white">Redux is a predictable state management library for JavaScript
+                    applications, commonly used with React. It helps manage application state in a centralized store,
+                    making it easier to track changes and maintain consistency across components.</div>
             </div>
             <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
                     <div class="card-icon1">
-                        <img class=" im mb-4" src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="">
+                        <img class=" im mb-4"
+                            src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp"
+                            alt="">
                     </div>
                     <div class="card-title1">
                         <h1 class="text-white mt-0 text-xl font-bold">Next.JS</h1>
                     </div>
                 </div>
-                <div class="card-description1 text-white">Next.js is a powerful React framework that enables developers to build high-performance web applications with features like server-side rendering (SSR), static site generation (SSG), and API routes. </div>
+                <div class="card-description1 text-white">Next.js is a powerful React framework that enables developers
+                    to build high-performance web applications with features like server-side rendering (SSR), static
+                    site generation (SSG), and API routes. </div>
             </div>
             <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
@@ -241,9 +266,27 @@
                         <h1 class="text-white mt-0 text-xl font-bold">TypeScript</h1>
                     </div>
                 </div>
-                <div class="card-description1 text-white">TypeScript is a strongly typed programming language that builds on JavaScript by adding static type definitions. Developed by Microsoft, it enhances code quality and maintainability by catching errors during development and providing better tooling support.</div>
+                <div class="card-description1 text-white">TypeScript is a strongly typed programming language that
+                    builds on JavaScript by adding static type definitions. Developed by Microsoft, it enhances code
+                    quality and maintainability by catching errors during development and providing better tooling
+                    support.</div>
             </div>
-            <div class="card2 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
+            <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
+                <div class="card-icon-title1 flex items-center gap-3">
+                    <div class="card-icon1 flex gap-2">
+                        <img class="mb-4 w-15 h-15" src="IMG/icons8-ui-48.png" alt="">
+                        
+                    </div>
+                    <div class="card-title1">
+                        <h1 class="text-white mt-0 text-xl font-bold">UI&UX</h1>
+                    </div>
+                </div>
+                <div class="card-description1 text-white">
+                    UI, or User Interface, refers to the visual elements and interactive components of a digital product, such as buttons, menus, icons, typography, and layouts. <br>
+                    UX, or User Experience, encompasses the overall experience a user has when interacting with a product or service. 
+                </div>
+            </div>
+            <div class="card1 border border-blue-500 rounded-lg p-4" data-aos="fade-left">
                 <div class="card-icon-title1 flex items-center gap-3">
                     <div class="card-icon1 flex gap-2">
                         <img class="mb-4" src="IMG/icons8-git-48.png" alt="">
@@ -255,7 +298,7 @@
                 </div>
                 <div class="card-description1 text-white">
                     Git and GitHub are essential tools in my workflow, allowing me to track changes and collaborate
-                    effectively with others.
+                    effectively with others.Git is a version control system (VCS) that allows developers to track changes in their code, collaborate efficiently, and revert to previous versions if needed.
                 </div>
             </div>
         </div>
@@ -359,7 +402,7 @@
                 <div class="project-info">
                     <p class="project-category"></p>
                     <strong class="project-title">
-                        <span>tourism  site</span>
+                        <span>tourism site</span>
                         <a href="https://github.com/asmaylmr117/tourism-site"><img src="IMG/icons8-github-50.png" alt=""
                                 class="iconprojet"></a>
                         <a href="https://tourism-site-six.vercel.app/" class="more-details">Visit</a>
@@ -395,7 +438,7 @@
                     </strong>
                 </div>
             </div>
-           <div class="project-card" data-aos="fade-right">
+            <div class="project-card" data-aos="fade-right">
                 <div class="project-image">
                     <img src="IMG/Pioc.PNG" />
                 </div>
@@ -422,8 +465,8 @@
                     </strong>
                 </div>
             </div>
-            
-            
+
+
             <div class="project-card" data-aos="fade-right">
                 <div class="project-image">
                     <img src="IMG/quiz.PNG" />
@@ -438,7 +481,7 @@
                     </strong>
                 </div>
             </div>
-           
+
         </div>
     </section>
 
@@ -536,11 +579,26 @@
         </div>
     </section>
     <script>
-        
+
         window.addEventListener('load', function () {
             const loadingScreen = document.getElementById('loading-screen');
             loadingScreen.style.display = 'none';
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navigation = document.querySelector('.navigation');
+    const closeBtn = document.querySelector('.close-btn');
+
+   
+    hamburger.addEventListener('click', function() {
+        navigation.classList.toggle('active');
+    });
+
+   
+    closeBtn.addEventListener('click', function() {
+        navigation.classList.remove('active');
+    });
+});
     </script>
 </body>
 
