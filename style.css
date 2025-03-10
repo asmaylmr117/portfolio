@@ -11,14 +11,13 @@ body{
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-
 .loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-     background-color: #072b6d; /* لون الخلفية */
+    background-color: #072b6d; /* لون الخلفية */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +242,7 @@ section {
 .info {
     text-align: center;
 }
-
+P
 .info h3{
     color: #3a6cf4;
     font-size: 1.2em;
@@ -252,7 +251,7 @@ section {
 }
 
 .projects {
-     background-image: url(IMG/pro.png) ;  
+    background-image: url(IMG/pro.png) ;     
 }
 .contact {
     background-color: rgb(12, 7, 85);
@@ -466,4 +465,9 @@ background-color: #6c6ceb;
     50% {
         opacity: 0;
     }
+}
+
+.im{
+    width: 70px;
+height: 70px;
 }
