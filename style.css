@@ -325,8 +325,7 @@ section {
     background-color: #dedfe4;
     border: 2px solid #3508fc;
     min-height: 14em;
-    width: 40%; 
-    max-width: 28em;
+    width: calc(33.33% - 40px);
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
@@ -336,7 +335,7 @@ section {
 
 @media (min-width: 641px) {
     .project-card {
-        width: calc(40% - 40px); 
+        width: calc(33.33% - 40px);
         margin: 20px;
     }
 }
@@ -344,7 +343,6 @@ section {
 @media (max-width: 640px) {
     .project-card {
         width: 100%; 
-        max-width: none; 
         margin: 20px 0;
     }
 }
