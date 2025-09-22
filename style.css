@@ -46,7 +46,7 @@ body{
 }
 
 header {
-    background-color: #1c1fcfef;
+    background-color: #1c1fcf80;
     width: 100%;
     position: fixed;
     z-index: 999;
