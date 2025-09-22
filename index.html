@@ -659,23 +659,46 @@
     </section>
     <script>
 
-        window.addEventListener('load', function () {
-            const loadingScreen = document.getElementById('loading-screen');
-            loadingScreen.style.display = 'none';
-        });
-        document.addEventListener('DOMContentLoaded', function() {
+       document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navigation = document.querySelector('.navigation');
     const closeBtn = document.querySelector('.close-btn');
+    const navLinks = document.querySelectorAll('.nav-link'); 
 
-   
+    
     hamburger.addEventListener('click', function() {
         navigation.classList.toggle('active');
     });
 
-   
     closeBtn.addEventListener('click', function() {
         navigation.classList.remove('active');
+    });
+
+   
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          
+            if (window.innerWidth <= 768) {
+                navigation.classList.remove('active');
+            }
+        });
+    });
+
+    
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navigation.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger && navigation.classList.contains('active')) {
+            navigation.classList.remove('active');
+        }
+    });
+
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navigation.classList.remove('active');
+        }
     });
 });
     </script>
