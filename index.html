@@ -53,78 +53,6 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            const texts = ["Full Stack Web Developer", "Software Engineer"];
-            const typingElement = document.getElementById('typing-text');
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingSpeed = 100;
-            const deletingSpeed = 50;
-
-            function type() {
-                const currentText = texts[textIndex];
-                if (isDeleting) {
-                    if (charIndex > 0) {
-                        charIndex--;
-                        typingElement.innerHTML = currentText.slice(0, charIndex) + '<span class="cursor">|</span>';
-                    } else {
-                        isDeleting = false;
-                        textIndex = (textIndex + 1) % texts.length;
-                        setTimeout(type, 500);
-                        return;
-                    }
-                } else {
-                    if (charIndex < currentText.length) {
-                        typingElement.innerHTML = currentText.slice(0, charIndex + 1) + '<span class="cursor">|</span>';
-                        charIndex++;
-                    } else {
-                        isDeleting = true;
-                        setTimeout(type, 1000);
-                        return;
-                    }
-                }
-                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
-            }
-            type();
-        });
-
-
-        function sendMail(event) {
-            event.preventDefault();
-            var params = {
-                firstName: document.getElementById("firstName").value,
-                lastName: document.getElementById("lastName").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                message: document.getElementById("message").value,
-            };
-
-            console.log(params);
-
-            const serviceID = "service_fntae4y";
-            const templateID = "template_s9xwcyf";
-
-            emailjs.send(serviceID, templateID, params)
-                .then(res => {
-                    document.getElementById("firstName").value = "";
-                    document.getElementById("lastName").value = "";
-                    document.getElementById("email").value = "";
-                    document.getElementById("phone").value = "";
-                    document.getElementById("message").value = "";
-                    console.log(res);
-                    alert("Your message sent successfully!!");
-                })
-                .catch(err => console.log(err));
-        }
-
-
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
     <section class="cardss " id="services">
         <h2 class="title">About Me, Skills</h2>
         <H1 class="title1">1 - FrontEnd</H1>
@@ -657,50 +585,130 @@
             </form>
         </div>
     </section>
-    <script>
 
-       document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navigation = document.querySelector('.navigation');
-    const closeBtn = document.querySelector('.close-btn');
-    const navLinks = document.querySelectorAll('.nav-link'); 
+    <!-- Scripts -->
+    <script type="text/javascript">
+        // Typing Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const texts = ["Full Stack Web Developer", "Software Engineer"];
+            const typingElement = document.getElementById('typing-text');
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const typingSpeed = 100;
+            const deletingSpeed = 50;
 
-    
-    hamburger.addEventListener('click', function() {
-        navigation.classList.toggle('active');
-    });
-
-    closeBtn.addEventListener('click', function() {
-        navigation.classList.remove('active');
-    });
-
-   
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          
-            if (window.innerWidth <= 768) {
-                navigation.classList.remove('active');
+            function type() {
+                const currentText = texts[textIndex];
+                if (isDeleting) {
+                    if (charIndex > 0) {
+                        charIndex--;
+                        typingElement.innerHTML = currentText.slice(0, charIndex) + '<span class="cursor">|</span>';
+                    } else {
+                        isDeleting = false;
+                        textIndex = (textIndex + 1) % texts.length;
+                        setTimeout(type, 500);
+                        return;
+                    }
+                } else {
+                    if (charIndex < currentText.length) {
+                        typingElement.innerHTML = currentText.slice(0, charIndex + 1) + '<span class="cursor">|</span>';
+                        charIndex++;
+                    } else {
+                        isDeleting = true;
+                        setTimeout(type, 1000);
+                        return;
+                    }
+                }
+                setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
             }
+            type();
         });
-    });
 
-    
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = navigation.contains(event.target);
-        const isClickOnHamburger = hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && !isClickOnHamburger && navigation.classList.contains('active')) {
-            navigation.classList.remove('active');
-        }
-    });
+        // Email Function
+        function sendMail(event) {
+            event.preventDefault();
+            var params = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value,
+            };
 
-    
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            navigation.classList.remove('active');
+            console.log(params);
+
+            const serviceID = "service_fntae4y";
+            const templateID = "template_s9xwcyf";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("firstName").value = "";
+                    document.getElementById("lastName").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("Your message sent successfully!!");
+                })
+                .catch(err => console.log(err));
         }
-    });
-});
+
+        // Loading Screen
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'none';
+        });
+
+        // Updated Mobile Navigation - هذا هو الكود المحدث
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navigation = document.querySelector('.navigation');
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinks = document.querySelectorAll('.nav-link'); // جلب جميع لينكات النافيجيشن
+
+            // فتح القائمة عند الضغط على الهامبورجر
+            hamburger.addEventListener('click', function() {
+                navigation.classList.toggle('active');
+            });
+
+            // إغلاق القائمة عند الضغط على زر الإغلاق
+            closeBtn.addEventListener('click', function() {
+                navigation.classList.remove('active');
+            });
+
+            // إغلاق القائمة عند الضغط على أي لينك في الشاشات الصغيرة
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // التحقق من أن الشاشة صغيرة (عرض أقل من 768px)
+                    if (window.innerWidth <= 768) {
+                        navigation.classList.remove('active');
+                    }
+                });
+            });
+
+            // إغلاق القائمة عند النقر خارجها (اختياري)
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navigation.contains(event.target);
+                const isClickOnHamburger = hamburger.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnHamburger && navigation.classList.contains('active')) {
+                    navigation.classList.remove('active');
+                }
+            });
+
+            // إغلاق القائمة عند تغيير حجم الشاشة (إذا تم تكبير الشاشة)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navigation.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
