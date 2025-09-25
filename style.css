@@ -456,10 +456,9 @@
 
             .main-content h2,
               .main h2 {
-           font-size: 2.5em !important;
-            white-space: nowrap;
-             overflow: hidden;
-         text-overflow: ellipsis;
+            font-size: 2.5em !important;
+            text-align: center;     /* وسط الشاشة */
+               margin-left: 0;         /* إلغاء الإزاحة لليسار */
             }
 
             .main h4 {
