@@ -944,15 +944,7 @@
     gap: 8px;
 }
 
-.view-btn {
-    background-color: #3498db;
-    color: white;
-}
 
-.view-btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-}
 
 .download-btn {
     background-color: #27ae60;
