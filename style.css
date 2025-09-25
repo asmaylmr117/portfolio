@@ -454,10 +454,12 @@
                 height: 320px;
             }
 
-            .main h2 {
-                font-size: 3em;
-            text-align: center;     
-             margin-left: 0;        
+            .main-content h2,
+              .main h2 {
+           font-size: 2.5em !important;
+            white-space: nowrap;
+             overflow: hidden;
+         text-overflow: ellipsis;
             }
 
             .main h4 {
