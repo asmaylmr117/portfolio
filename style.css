@@ -455,7 +455,9 @@
             }
 
             .main h2 {
-                font-size:3em;
+                font-size: 3em;
+            text-align: center;     
+             margin-left: 0;        
             }
 
             .main h4 {
