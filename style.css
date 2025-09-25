@@ -1001,3 +1001,9 @@
         font-size: 1.5em;
     }
 }
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
