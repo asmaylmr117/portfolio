@@ -301,7 +301,7 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .main-btn, .cv-btn {
+        .main-btn1, .cv-btn {
             color: #fff;
             background: linear-gradient(135deg, #3a6cf4, #1c1fcf);
             text-decoration: none;
