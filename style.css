@@ -472,6 +472,16 @@
             .social-icons {
                 justify-content: center;
             }
+          .view-btn,
+          .download-btn {
+               font-size: 1em;
+               padding: 12px 20px;
+               width: 200px;
+               justify-content: center;
+               text-align: center;
+                border-radius: 15px;
+               }
+
         }
 .title {
     display: flex;
