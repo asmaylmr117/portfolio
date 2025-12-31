@@ -156,7 +156,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #072b6d 0%, #1c1fcf 50%, #3a6cf4 100%);
+            background: #080855;
             position: relative;
             overflow: hidden;
         }
